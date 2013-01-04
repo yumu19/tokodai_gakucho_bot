@@ -2,8 +2,6 @@
 require 'rubygems'
 gem 'twitter'
 require 'twitter'
-require 'sqlite3'
-require 'uri'
 require 'yaml'
 require 'prime'
 
