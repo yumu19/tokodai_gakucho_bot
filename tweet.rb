@@ -24,8 +24,24 @@ if (a > 6)
   open("res.txt") {|f|
     s << f.readlines[rand(lc)]
   }
-else
+else if (a == 6)
+  b = rand(10000000)
+  n = Prime.each(b).each{|prime| prime }
+  s = "#{n}"
+else if (a > 3)
   b = rand(1000000)
+  n = Prime.each(b).each{|prime| prime }
+  s = "#{n}"
+else if (a == 3)
+  b = rand(10000)
+  n = Prime.each(b).each{|prime| prime }
+  s = "#{n}"
+else if (a > 0)
+  b = rand(100)
+  n = Prime.each(b).each{|prime| prime }
+  s = "#{n}"
+else
+  b = rand(10)
   n = Prime.each(b).each{|prime| prime }
   s = "#{n}"
 end
