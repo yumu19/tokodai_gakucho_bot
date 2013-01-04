@@ -24,19 +24,19 @@ if (a > 6)
   open("res.txt") {|f|
     s << f.readlines[rand(lc)]
   }
-else if (a == 6)
+elsif (a == 6)
   b = rand(10000000)
   n = Prime.each(b).each{|prime| prime }
   s = "#{n}"
-else if (a > 3)
+elsif (a > 3)
   b = rand(1000000)
   n = Prime.each(b).each{|prime| prime }
   s = "#{n}"
-else if (a == 3)
+elsif (a == 3)
   b = rand(10000)
   n = Prime.each(b).each{|prime| prime }
   s = "#{n}"
-else if (a > 0)
+elsif (a > 0)
   b = rand(100)
   n = Prime.each(b).each{|prime| prime }
   s = "#{n}"
