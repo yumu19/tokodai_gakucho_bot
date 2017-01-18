@@ -1,19 +1,15 @@
 # coding: utf-8
-require 'rubygems'
-gem 'twitter'
 require 'twitter'
 require 'yaml'
 require 'prime'
 
-f1 = open("config.yml")
-yaml = YAML.load(f1.read) 
-f1.close
+config = YAML.load_file('config.yml')
 
-Twitter.configure do |config|
-  config.consumer_key = yaml['consumer_key']
-  config.consumer_secret = yaml['consumer_secret']
-  config.oauth_token = yaml['access_token']
-  config.oauth_token_secret = yaml['access_token_secret']
+twitter_client = Twitter::REST::Client.new do |c|
+  c.consumer_key = config["twitter"]["consumer_key"]
+  c.consumer_secret = config["twitter"]["consumer_secret"]
+  c.access_token = config["twitter"]["access_token"]
+  c.access_token_secret = config["twitter"]["access_token_secret"]
 end
 
 s = ""
@@ -47,4 +43,4 @@ else
 end
 
 p s
-Twitter.update(s)
+twitter_client.update(s)
