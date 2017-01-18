@@ -1,4 +1,5 @@
 # coding: utf-8
+require 'bundler/setup'
 require 'twitter'
 require 'yaml'
 require 'prime'

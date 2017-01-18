@@ -18,3 +18,5 @@ _yardoc
 doc/
 
 config.yml
+Gemfile.lock
+vendor/bundle
